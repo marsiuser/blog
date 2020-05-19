@@ -301,7 +301,7 @@ nav li:hover > .submenu {
 .event-section__planning{
     margin-top: 45px;
     border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 15px 12px rgba(221, 221, 221, 0.3);
     width: 65.7%;
     position: relative;
 }
@@ -399,7 +399,7 @@ nav li:hover > .submenu {
 .info_section{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 84px;
+    margin-top: 99px;
     justify-content: space-between;
 }
 
@@ -407,18 +407,20 @@ nav li:hover > .submenu {
     width: 33%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 62px;
-    padding: 15px;
+    margin-bottom: 70px;
+    padding: 0px 12px 12px;
 }
 
 .info_section .info-cart:hover{
     background-color: #fafbfc;
-    border-radius: 15px 10px;
+    border-radius: 15px;
+    transition: 0.3s;
 }
 
 .info_section .info-cart img{
-    max-width: 403px;
+    max-width: 392px;
     border-radius: 16px;
+    margin-top: 12px;
 }
 
 .info_section .info-cart span{
@@ -445,10 +447,10 @@ nav li:hover > .submenu {
 
 .info-btn__read{
     max-width: 300px;
-    margin: 56px auto 23px;
+    margin: 53px auto 23px;
 }
 
-.info-btn__read button{
+.info-btn__read a{
     border: none;
     background-color: #19329f;
     color: #fff;
@@ -457,9 +459,11 @@ nav li:hover > .submenu {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
 }
 
-.info-btn__read button:hover{
+.info-btn__read a:hover{
     background-color: #132675;
     transition: 0.3s;
 }
@@ -520,7 +524,7 @@ footer{
     border-radius: 32px;
     background-color: #fff;
     border: 1px solid #b3b3b3;
-    padding: 16px 65px 13px 0px;
+    padding: 16px 39px 13px 71px;
     width: 70%;
     font-size: 18px;
     letter-spacing: -0.8px;
@@ -529,7 +533,26 @@ footer{
     color: #333333;
 }
 
-.footer-btn__white::before{
+::placeholder {
+    color: #333333;
+    opacity: 1;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  :-ms-input-placeholder { 
+    color: #333333;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  ::-ms-input-placeholder {
+    color: #3333;
+    font-family: "Raleway", sans-serif;
+  }
+
+  #form_email{
+      position: relative;
+  }
+ .footer-btn__blue::before{
     content: "";
     position: absolute;
     background: url(../img/mail.png);
@@ -556,6 +579,7 @@ footer{
 .footer-block__btns span{
     margin-left: 9px;
     letter-spacing: -1px;
+    margin-top: -3px;
 }
 
 .footer-image{
@@ -622,11 +646,14 @@ footer .footer-menu__wrap{
     color: #fff;
 }
 
-footer .footer-menu__leading h3{
+footer .footer-menu__leading h3,
+footer .footer-menu__leading h3 > a{
     font-size: 32px;
     font-weight: 700;
     margin-top: 4px;
     letter-spacing: -0.1px;
+    color: #fff;
+    text-decoration: none;
 }
 
 footer .footer-menu__leading img{
@@ -698,7 +725,12 @@ footer .footer-menu__social {
 footer .footer-contacts li {
     font-size: 16px;
 }
-
+ footer .footer-menu__wrap .footer-contacts a{
+    display: inline-block;
+}
+.footer .footer-contacts ul:last-child li{
+    display: flex;
+}
 .footer-about{
     margin-right: 23px;
 }
@@ -714,6 +746,10 @@ footer .footer_privacy{
     font-size: 15px;
 }
 
+.footer_privacy a{
+    color: #fff;
+    text-decoration: none;
+}
 .footer_privacy span{
     padding: 0px 14px;
 }
@@ -726,6 +762,7 @@ footer .footer-menu__item a{
     position: relative;
     text-decoration: none;
     display: block;
+    outline: none;
 }
 footer .footer-menu__item a::before{
     display: block;
@@ -814,9 +851,31 @@ footer .footer-menu__item a::before{
     .info_section .info-cart {
         width: 48%;
     }
+    .topmenu > li > a{
+        padding: 18px 14px 0px 4px;
+    }
+    .header-btn {
+        width: 25%;
+    }
+    .header-logo img{
+        width: 66%;
+    }
+    .header-btn__prices {
+        padding: 11px 8px 9px 37px;
+    }
+    .header-btn__gdpr{
+        padding: 11px 7px 9px 39px;
+    }
 }
 
 @media(max-width: 1020px){
+    .footer-btn__white,
+    .footer-btn__blue{
+        width: 85%;
+    }
+    .header-logo img{
+        width: 100%;
+    }
     .footer-image::after{
         width: 320px;
     }
@@ -900,7 +959,7 @@ footer .footer-menu__item a::before{
         display: flex;
         align-items: center;
         position: absolute;
-        top: 20px;
+        top: 26px;
         right: 20px;
         width: 26px;
         height: 26px;
@@ -996,9 +1055,25 @@ footer .footer-menu__item a::before{
         height: 10px;
         background-repeat: no-repeat;
     }
+    .header-wrap{
+        padding: 14px 0px 14px;
+    }
+    
 }
 
 @media(max-width: 800px){
+    .footer-services{
+        margin-left: 0px;
+    }
+    footer .footer-menu__item{
+        width: 45%;
+    }
+    footer .footer-menu__item {
+        margin-top: 35px;
+    }
+    .footer-btn__blue::before{
+        top: 28px;
+    }
     .footer-block__sub{
         width: 60%;
     }
@@ -1032,7 +1107,7 @@ footer .footer-menu__item a::before{
         margin-top: 30px;
     }
     .footer-image::after{
-        background: none;
+        display: none;
     }
     .footer-block__sub {
         width: 100%;
@@ -1048,9 +1123,21 @@ footer .footer-menu__item a::before{
     .event-breadcrumbs p, .event-breadcrumbs a{
         margin-left: 0px;
     }
+    footer .footer-contacts {
+        width: 54% !important;
+    }
 }
 
 @media(max-width: 600px){
+    footer .footer-menu__social{
+        margin: 30px auto 10px;
+    }
+    .footer-about{
+        margin-right: 0px;
+    }
+    .menu__box > li::after{
+        right: 80px;
+    }
     .info_section .info-cart,
     .info_section .info-cart img{
         max-width: unset;
@@ -1082,9 +1169,21 @@ footer .footer-menu__item a::before{
     footer .footer-menu__item {
         margin-top: 40px;
     }
+    footer .footer-menu__item {
+        width: 43%;
+    }
+    footer .footer-contacts{
+        width: 100% !important;
+    }
 }
 
 @media(max-width: 400px){
+    footer .footer-btn__same .header-btn__gdpr, footer .footer-btn__same .header-btn__prices{
+        height: 40px;
+    }
+    .event-section__planning_description {
+        padding: 17px 15px;
+    }
     .container, .header-wrap, .footer-wrap {
         width: 90%;
         padding-left: 5px;
@@ -1100,7 +1199,7 @@ footer .footer-menu__item a::before{
     .info_section .info-cart a{
         font-size: 16px;
     }
-    .info-btn__read button{
+    .info-btn__read a{
         width: 100%;
     }
     .info-btn__read{
