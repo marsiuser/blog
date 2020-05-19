@@ -22,3 +22,6 @@ window.addEventListener('click', function(e) {
     }
 });
 
+$(document).ready(function(){
+    $(".")
+});
