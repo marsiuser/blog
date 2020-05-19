@@ -368,6 +368,8 @@ nav li:hover > .submenu {
     padding: 5px 20px;
     margin-bottom: 9px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .event_cart:hover{
