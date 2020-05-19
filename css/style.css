@@ -975,7 +975,7 @@ footer .footer-menu__item a::before{
         align-items: center;
         position: absolute;
         top: 18px;
-        right: 130px;
+        right: 30px;
         width: 26px;
         height: 26px;
         cursor: pointer;
@@ -1074,7 +1074,7 @@ footer .footer-menu__item a::before{
     .menu__box > li{
         position: relative;
     }
-    .menu__box > li::after {
+    .menu__box > li:first-child::after {
         content: "";
         position: absolute;
         background: url(../img/menu_arrow.png);
