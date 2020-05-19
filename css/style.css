@@ -61,6 +61,7 @@ header{
     border-radius: 5px;
     position: relative;
     cursor: pointer;
+    height: 41px;
 }
 
 .header-btn__gdpr{
@@ -134,7 +135,7 @@ nav a {
   position: relative;
 }
 
-.topmenu > li::after{
+.topmenu > li:first-child:after{
     content:"";
     position: absolute;
     background: url(../img/menu_arrow.png);
@@ -598,7 +599,7 @@ footer{
     top: 0px;
     right: 0px;
     background-size: cover;
-    width: 490px;
+    width: 493px;
     height: 100%;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -667,7 +668,7 @@ footer .footer-menu__leading p{
 }
 
 footer .footer-menu__leading{
-    width: 31%;
+    width: 34%;
 }
 
 footer .footer-menu__leading .footer-btn__same{
@@ -832,9 +833,21 @@ footer .footer-menu__item a::before{
         max-width: unset;
         width: 100%;
     }
+    footer .footer-menu__leading {
+        width: 38%;
+    }
 }
 
 @media(max-width: 1160px){
+    .footer-block__sub h3 {
+        font-size: 28px;
+    }
+    footer{
+        margin-top: 330px;
+    }
+    .info-btn__read{
+        margin: 0 auto;
+    }
     .container, .header-wrap, .footer-wrap {
         max-width: 980px;
     }
@@ -917,6 +930,7 @@ footer .footer-menu__item a::before{
     .sub-menu 
     { 
         display: none; 
+        transition: 0.4s;
     } 
     .sub-menu li > a{
         font-size: 16px;
@@ -929,12 +943,12 @@ footer .footer-menu__item a::before{
         color: gray;
         transition: 0.5s;
     }
-    .main-item:focus ~ .sub-menu, 
+    /* .main-item:focus ~ .sub-menu, 
     .main-item:active ~ .sub-menu, 
     .sub-menu:hover 
     { 
         display: block; 
-    } 
+    }  */
     #menu__toggle {
         opacity: 0;
       }
@@ -961,7 +975,7 @@ footer .footer-menu__item a::before{
         align-items: center;
         position: absolute;
         top: 18px;
-        right: 20px;
+        right: 130px;
         width: 26px;
         height: 26px;
         cursor: pointer;
@@ -981,6 +995,20 @@ footer .footer-menu__item a::before{
       
         transition-duration: .25s;
       }
+      .b-toggle {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        -moz-transition: opacity .3s, max-height .3s;
+        -ms-transition: opacity .3s, max-height .3s;
+        transition: opacity .3s, max-height .3s;
+        display: none;
+    }
+    .expanded {
+        max-height: 100px;
+        opacity: 1;
+        display: block;
+    }
       .menu__btn > span::before {
         content: '';
         top: -8px;
